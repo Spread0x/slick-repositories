@@ -1,37 +1,17 @@
-/*
- * MIT License
- *
- * Copyright (c) 2016 Gonçalo Marques
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+//import sbt.Keys._
+// import scoverage.ScoverageKeys._
+//import com.typesafe.sbt.pgp.PgpKeys._
 
-import sbt.Keys._
-import sbt._
-import scoverage.ScoverageKeys._
-import com.typesafe.sbt.pgp.PgpKeys._
-
-object Build extends Build {
+//object Build extends Build {
 
   val dependencyResolvers = Seq("Typesafe Maven Repository" at "http://repo.typesafe.com/typesafe/maven-releases/")
 
   val dependencies = Seq(
+    "org.scala-lang" % "scala-reflect" % "2.12.8",
+    "com.typesafe.slick" %% "slick" % "3.3.0",
+    "org.slf4j" % "slf4j-nop" % "1.6.4",
+    //"com.typesafe.slick" %% "slick-extensions" % "3.1.0" % "test",
+    "com.typesafe.slick" %% "slick-hikaricp" % "3.3.0" % "test",
     "org.scalatest" %% "scalatest" % "3.0.0" % "test",
     "com.h2database" % "h2" % "1.4.192" % "test",
     "mysql" % "mysql-connector-java" % "5.1.38" % "test",
@@ -42,12 +22,12 @@ object Build extends Build {
     "joda-time" % "joda-time" % "2.9.6" % "test"
   )
 
-  lazy val project: Project =
-    Project("root", file("."))
-      .configs(AllDbsTest, Db2Test, SqlServerTest)
-      .settings(inConfig(AllDbsTest)(Defaults.testTasks): _*)
-      .settings(inConfig(Db2Test)(Defaults.testTasks): _*)
-      .settings(inConfig(SqlServerTest)(Defaults.testTasks): _*)
+  lazy val core =
+    (project in file("."))
+    .configs(AllDbsTest, Db2Test, SqlServerTest)
+    .settings(inConfig(AllDbsTest)(Defaults.testTasks): _*)
+    .settings(inConfig(Db2Test)(Defaults.testTasks): _*)
+    .settings(inConfig(SqlServerTest)(Defaults.testTasks): _*)
       .settings(
 
         name := "slick-repo",
@@ -56,22 +36,10 @@ object Build extends Build {
 
         scalaVersion := "2.12.8",
         crossScalaVersions := Seq("2.12.6", "2.11.12", "2.10.7"),
-
         libraryDependencies ++= dependencies,
-        libraryDependencies <++= scalaVersion (
-          version => Seq(
-            getSlickDependency("slick", version),
-            getSlickDependency("slick-hikaricp", version) % "test"
-          ) ++
-          (if (version.startsWith("2.10")) Seq("com.typesafe.slick" %% "slick-extensions" % "3.1.0" % "test") else Seq.empty) ++
-          Seq("org.scala-lang" % "scala-reflect" % version)
-        ),
-
         resolvers ++= dependencyResolvers,
-
         parallelExecution in Test := false,
-        coverageEnabled := true,
-
+        // coverageEnabled := true,
         testOptions in Test := Seq(Tests.Filter(baseFilter)),
         testOptions in Db2Test := Seq(Tests.Filter(db2Filter)),
         testOptions in AllDbsTest := Seq(Tests.Filter(allDbsFilter)),
@@ -89,7 +57,7 @@ object Build extends Build {
             Some("releases"  at nexus + "service/local/staging/deploy/maven2")
         },
         credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
-        useGpg := true,
+        // useGpg := true,
         pomExtra :=
           <url>https://github.com/gonmarques/slick-repo</url>
           <inceptionYear>2016</inceptionYear>
@@ -130,7 +98,7 @@ object Build extends Build {
           </scm>
 
       )
-
+/*
   lazy val mysql: Project =
     Project("mysql", file("src/docker/mysql"))
       .settings(
@@ -155,6 +123,14 @@ object Build extends Build {
         name := "postgres"
       )
 
+
+  def getSlickDependency(slickComponent: String, version: String): ModuleID = {
+    "com.typesafe.slick" %
+    (slickComponent + "_" + version.substring(0, version.lastIndexOf('.'))) %
+    (if(version.startsWith("2.10")) {"3.1.1"} else {"3.3.0"})
+  }
+  */
+// }
   val dbPrefixes = Seq("MySQL", "Oracle", "Postgres", "Derby", "Hsql")
   val db2Prefix = Seq("DB2")
   val sqlServerPrefix = Seq("SQLServer")
@@ -172,9 +148,3 @@ object Build extends Build {
 
   def baseFilter(name: String): Boolean = !allDbsFilter(name) && !db2Filter(name) && !sqlServerFilter(name)
 
-  def getSlickDependency(slickComponent: String, version: String): ModuleID = {
-    "com.typesafe.slick" %
-    (slickComponent + "_" + version.substring(0, version.lastIndexOf('.'))) %
-    (if(version.startsWith("2.10")) {"3.1.1"} else {"3.3.0"})
-  }
-}
