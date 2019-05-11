@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.sqlserver
+package com.spread0x.slickrepo.test.sqlserver
 
-import com.byteslounge.slickrepo.test.{JodaTimeVersionedRepositoryTest, SQLServerConfig}
+import com.spread0x.slickrepo.test.{JodaTimeVersionedRepositoryTest, SQLServerConfig}
 
 class SQLServerJodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(SQLServerConfig.config)

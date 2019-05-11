@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.oracle
+package com.spread0x.slickrepo.test.oracle
 
-import com.byteslounge.slickrepo.test.{IntegerVersionedRepositoryAutoPkTest, OracleConfig}
+import com.spread0x.slickrepo.test.{IntegerVersionedRepositoryAutoPkTest, OracleConfig}
 
 class OracleIntegerVersionedRepositoryTest extends IntegerVersionedRepositoryAutoPkTest(OracleConfig.config)

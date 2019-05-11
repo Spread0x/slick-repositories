@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.version
+package com.spread0x.slickrepo.version
 
 import java.time.{Instant, LocalDateTime}
 
-import com.byteslounge.slickrepo.datetime.{DateTimeHelper, MockDateTimeHelper}
+import com.spread0x.slickrepo.datetime.{DateTimeHelper, MockDateTimeHelper}
 import org.scalatest.{BeforeAndAfter, FlatSpec, Matchers}
 
 class VersionGeneratorTest extends FlatSpec with Matchers with BeforeAndAfter {

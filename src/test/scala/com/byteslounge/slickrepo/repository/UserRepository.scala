@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
-import com.byteslounge.slickrepo.annotation.{prePersist, preUpdate}
-import com.byteslounge.slickrepo.meta.{Entity, Keyed}
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.annotation.{prePersist, preUpdate}
+import com.spread0x.slickrepo.meta.{Entity, Keyed}
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
 import slick.ast.BaseTypedType
 
 trait Persistable[T] {

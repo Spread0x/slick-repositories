@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.derby
+package com.spread0x.slickrepo.test.derby
 
-import com.byteslounge.slickrepo.test.{DerbyConfig, JodaTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{DerbyConfig, JodaTimeVersionedRepositoryTest}
 
 class DerbyJodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(DerbyConfig.config)

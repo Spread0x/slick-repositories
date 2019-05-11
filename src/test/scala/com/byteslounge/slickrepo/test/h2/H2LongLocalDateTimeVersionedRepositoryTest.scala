@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.h2
+package com.spread0x.slickrepo.test.h2
 
-import com.byteslounge.slickrepo.test.{H2Config, LongLocalDateTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{H2Config, LongLocalDateTimeVersionedRepositoryTest}
 
 class H2LongLocalDateTimeVersionedRepositoryTest extends LongLocalDateTimeVersionedRepositoryTest(H2Config.config)

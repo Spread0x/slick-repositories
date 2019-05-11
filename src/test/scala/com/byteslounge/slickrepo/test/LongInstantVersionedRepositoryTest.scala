@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
 import java.time.Instant
 
-import com.byteslounge.slickrepo.datetime.MockDateTimeHelper
-import com.byteslounge.slickrepo.exception.OptimisticLockException
-import com.byteslounge.slickrepo.repository.TestLongInstantVersionedEntity
+import com.spread0x.slickrepo.datetime.MockDateTimeHelper
+import com.spread0x.slickrepo.exception.OptimisticLockException
+import com.spread0x.slickrepo.repository.TestLongInstantVersionedEntity
 
 abstract class LongInstantVersionedRepositoryTest(override val config: Config) extends AbstractRepositoryTest(config) {
 
@@ -73,7 +73,7 @@ abstract class LongInstantVersionedRepositoryTest(override val config: Config) e
 
       executeAction(testLongInstantVersionedEntityRepository.update(readEntity.copy(price = 4)))
     }
-    exception.getMessage should equal("Failed to update entity of type com.byteslounge.slickrepo.repository.TestLongInstantVersionedEntity. Expected version was not found: 2016-01-03T01:01:02Z")
+    exception.getMessage should equal("Failed to update entity of type com.spread0x.slickrepo.repository.TestLongInstantVersionedEntity. Expected version was not found: 2016-01-03T01:01:02Z")
   }
 
   it should "perform a batch insert of instant versioned entities" in {

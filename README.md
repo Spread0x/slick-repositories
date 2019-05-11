@@ -20,7 +20,7 @@ Slick Repositories is an aggregation of common database operations in ready-to-b
 The library releases are available at [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cbyteslounge%20slick-repo) for Scala **2.10**, **2.11** and **2.12**. In order to add the library as a dependency to your project:
 
 ```scala
-libraryDependencies += "com.byteslounge" %% "slick-repo" % "1.5.2"
+libraryDependencies += "com.spread0x" %% "slick-repo" % "1.5.2"
 ```
 
 ## Introduction
@@ -88,7 +88,7 @@ Now it's just a matter of bringing the implicit converter into scope where neede
 
 ```scala
 import scala.concurrent.ExecutionContext.Implicits.global
-import com.byteslounge.slickrepo.test.DatabaseExecutor._
+import com.spread0x.slickrepo.test.DatabaseExecutor._
 
 val coffeeRepository = new CoffeeRepository(MySQLDriver)
 val coffee: Future[Coffee] = coffeeRepository.save(Coffee(None, "Espresso"))
@@ -238,13 +238,13 @@ The following version types are supported out-of-the-box:
 
  - `Long` - The version field will be an incrementing `Long` value
 
- - `com.byteslounge.slickrepo.version.InstantVersion` - The library will set the version field as a `java.sql.Timestamp` parameter in the underlying prepared statement. The timestamp will be built using the current UTC instant represented in the number of milliseconds since 1 January 1970.
+ - `com.spread0x.slickrepo.version.InstantVersion` - The library will set the version field as a `java.sql.Timestamp` parameter in the underlying prepared statement. The timestamp will be built using the current UTC instant represented in the number of milliseconds since 1 January 1970.
 
- - `com.byteslounge.slickrepo.version.LongInstantVersion` - The library will set the version field as a `Long` value equal to the current UTC instant represented by the number of milliseconds since 1 January 1970.
+ - `com.spread0x.slickrepo.version.LongInstantVersion` - The library will set the version field as a `Long` value equal to the current UTC instant represented by the number of milliseconds since 1 January 1970.
 
- - `com.byteslounge.slickrepo.version.LocalDateTimeVersion` - The library will set the version field as a `java.sql.Timestamp` parameter in the underlying prepared statement. The timestamp will be built using the current local date and time, exactly like if it was obtained with `new java.util.Date()`. This means that the timestamp will be created using the number of milliseconds since 1 January 1970 until the local date and time as if it was in GMT. **Example**: The local date time is `2017-04-03 21:05:23.434`. The number of milliseconds that will be used to create the timestamp is `1491249923434`.
+ - `com.spread0x.slickrepo.version.LocalDateTimeVersion` - The library will set the version field as a `java.sql.Timestamp` parameter in the underlying prepared statement. The timestamp will be built using the current local date and time, exactly like if it was obtained with `new java.util.Date()`. This means that the timestamp will be created using the number of milliseconds since 1 January 1970 until the local date and time as if it was in GMT. **Example**: The local date time is `2017-04-03 21:05:23.434`. The number of milliseconds that will be used to create the timestamp is `1491249923434`.
 
- - `com.byteslounge.slickrepo.version.LongLocalDateTimeVersion` - The library will use the same strategy as if the version field was of type `com.byteslounge.slickrepo.version.LocalDateTimeVersion` but it will store the value as a `Long` number containing the milliseconds since 1 January 1970.
+ - `com.spread0x.slickrepo.version.LongLocalDateTimeVersion` - The library will use the same strategy as if the version field was of type `com.spread0x.slickrepo.version.LocalDateTimeVersion` but it will store the value as a `Long` number containing the milliseconds since 1 January 1970.
 
 ### Custom version types
 
@@ -277,7 +277,7 @@ object VersionImplicits {
 Now it should be just a matter of bringing the implicit `uuidVersionGenerator` that was just created into the repository scope:
 
 ```scala
-import com.byteslounge.slickrepo.version.VersionImplicits.uuidVersionGenerator
+import com.spread0x.slickrepo.version.VersionImplicits.uuidVersionGenerator
 
 case class StringVersionedEntity(
   override val id: Option[Int],
@@ -308,7 +308,7 @@ When such a method is called for a given entity, that entity will be pessimistic
 The repositories may define listeners that are invoked by the library when certain actions take place. For instance, a given repository may define a `prePersist` listener which will be invoked just before an entity that is managed by that repository is persisted:
 
 ```scala
-import com.byteslounge.slickrepo.annotation.prePersist
+import com.spread0x.slickrepo.annotation.prePersist
 
 class CoffeeRepository(override val driver: JdbcProfile) extends Repository[Coffee, Int](driver) {
 

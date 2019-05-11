@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.postgres
+package com.spread0x.slickrepo.test.postgres
 
-import com.byteslounge.slickrepo.test.{PostgresConfig, RepositoryUpdateAutoPkTest}
+import com.spread0x.slickrepo.test.{PostgresConfig, RepositoryUpdateAutoPkTest}
 
 class PostgresRepositoryTest extends RepositoryUpdateAutoPkTest(PostgresConfig.config)

@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.sqlserver
+package com.spread0x.slickrepo.test.sqlserver
 
-import com.byteslounge.slickrepo.test.{RepositoryLifecycleEventsTest, SQLServerConfig}
+import com.spread0x.slickrepo.test.{RepositoryLifecycleEventsTest, SQLServerConfig}
 
 class SQLServerRepositoryLifecycleEventsTest extends RepositoryLifecycleEventsTest(SQLServerConfig.config)

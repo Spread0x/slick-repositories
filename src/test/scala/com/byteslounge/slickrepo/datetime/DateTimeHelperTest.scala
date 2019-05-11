@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.datetime
+package com.spread0x.slickrepo.datetime
 
 import java.time.{Instant, LocalDateTime}
 

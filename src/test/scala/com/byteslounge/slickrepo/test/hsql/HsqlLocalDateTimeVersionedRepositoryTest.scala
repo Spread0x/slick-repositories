@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.hsql
+package com.spread0x.slickrepo.test.hsql
 
-import com.byteslounge.slickrepo.test.{HsqlConfig, LocalDateTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{HsqlConfig, LocalDateTimeVersionedRepositoryTest}
 
 class HsqlLocalDateTimeVersionedRepositoryTest extends LocalDateTimeVersionedRepositoryTest(HsqlConfig.config)

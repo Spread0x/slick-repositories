@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.hsql
+package com.spread0x.slickrepo.test.hsql
 
-import com.byteslounge.slickrepo.test.{HsqlConfig, LongVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{HsqlConfig, LongVersionedRepositoryTest}
 
 class HsqlLongVersionedRepositoryTest extends LongVersionedRepositoryTest(HsqlConfig.config)

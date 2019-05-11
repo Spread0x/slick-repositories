@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.exception.OptimisticLockException
-import com.byteslounge.slickrepo.repository.TestLongVersionedEntity
+import com.spread0x.slickrepo.exception.OptimisticLockException
+import com.spread0x.slickrepo.repository.TestLongVersionedEntity
 
 abstract class LongVersionedRepositoryTest(override val config: Config) extends AbstractRepositoryTest(config) {
 
@@ -61,7 +61,7 @@ abstract class LongVersionedRepositoryTest(override val config: Config) extends 
 
       executeAction(testLongVersionedEntityRepository.update(readEntity.copy(price = 4)))
     }
-    exception.getMessage should equal("Failed to update entity of type com.byteslounge.slickrepo.repository.TestLongVersionedEntity. Expected version was not found: 1")
+    exception.getMessage should equal("Failed to update entity of type com.spread0x.slickrepo.repository.TestLongVersionedEntity. Expected version was not found: 1")
   }
 
   it should "perform a batch insert of long versioned entities" in {

@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.repository._
+import com.spread0x.slickrepo.repository._
 
 abstract class RepositoryUpdateAutoPkTest(override val config: Config) extends RepositoryTest(config) {
 

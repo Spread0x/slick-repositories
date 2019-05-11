@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.sqlserver
+package com.spread0x.slickrepo.test.sqlserver
 
-import com.byteslounge.slickrepo.test.{LongLocalDateTimeVersionedRepositoryTest, SQLServerConfig}
+import com.spread0x.slickrepo.test.{LongLocalDateTimeVersionedRepositoryTest, SQLServerConfig}
 
 class SQLServerLongLocalDateTimeVersionedRepositoryTest extends LongLocalDateTimeVersionedRepositoryTest(SQLServerConfig.config)

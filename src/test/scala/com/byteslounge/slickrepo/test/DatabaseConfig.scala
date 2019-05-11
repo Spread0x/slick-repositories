@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
-import com.byteslounge.slickrepo.test.scalaversion._
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.test.scalaversion._
 
 case class Error(errorCode: Int, sqlState: String)
 case class Config(driver: JdbcProfile, dbConfig: String, rollbackTxError: Error, rowLockTimeoutError: Error, validationQuery: String)

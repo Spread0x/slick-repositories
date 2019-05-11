@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.sqlserver
+package com.spread0x.slickrepo.test.sqlserver
 
-import com.byteslounge.slickrepo.test.{InstantVersionedRepositoryTest, SQLServerConfig}
+import com.spread0x.slickrepo.test.{InstantVersionedRepositoryTest, SQLServerConfig}
 
 class SQLServerInstantVersionedRepositoryTest extends InstantVersionedRepositoryTest(SQLServerConfig.config)

@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.oracle
+package com.spread0x.slickrepo.test.oracle
 
-import com.byteslounge.slickrepo.test.{OracleConfig, RepositoryLifecycleEventsTest}
+import com.spread0x.slickrepo.test.{OracleConfig, RepositoryLifecycleEventsTest}
 
 class OracleRepositoryLifecycleEventsTest extends RepositoryLifecycleEventsTest(OracleConfig.config)

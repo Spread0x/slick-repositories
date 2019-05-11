@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.derby
+package com.spread0x.slickrepo.test.derby
 
-import com.byteslounge.slickrepo.test.{DerbyConfig, LongVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{DerbyConfig, LongVersionedRepositoryTest}
 
 class DerbyLongVersionedRepositoryTest extends LongVersionedRepositoryTest(DerbyConfig.config)

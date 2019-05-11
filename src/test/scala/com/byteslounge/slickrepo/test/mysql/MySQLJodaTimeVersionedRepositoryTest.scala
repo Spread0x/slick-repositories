@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.mysql
+package com.spread0x.slickrepo.test.mysql
 
-import com.byteslounge.slickrepo.test.{JodaTimeVersionedRepositoryTest, MySQLConfig}
+import com.spread0x.slickrepo.test.{JodaTimeVersionedRepositoryTest, MySQLConfig}
 
 class MySQLJodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(MySQLConfig.config)

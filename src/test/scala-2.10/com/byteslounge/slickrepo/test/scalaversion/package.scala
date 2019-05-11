@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
 package object scalaversion {
   type H2Profile = slick.driver.H2Driver

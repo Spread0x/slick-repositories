@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.mysql
+package com.spread0x.slickrepo.test.mysql
 
-import com.byteslounge.slickrepo.test.{MySQLConfig, RepositoryLifecycleEventsTest}
+import com.spread0x.slickrepo.test.{MySQLConfig, RepositoryLifecycleEventsTest}
 
 class MySQLRepositoryLifecycleEventsTest extends RepositoryLifecycleEventsTest(MySQLConfig.config)

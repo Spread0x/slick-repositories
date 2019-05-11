@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.repository.{CompositeRepository, UserRepository, _}
-import com.byteslounge.slickrepo.test.scalaversion.OracleProfile
+import com.spread0x.slickrepo.repository.{CompositeRepository, UserRepository, _}
+import com.spread0x.slickrepo.test.scalaversion.OracleProfile
 import org.scalatest.{BeforeAndAfter, FlatSpec, Matchers}
 import org.slf4j.LoggerFactory
 

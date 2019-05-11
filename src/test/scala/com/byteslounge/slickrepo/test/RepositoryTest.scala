@@ -22,14 +22,14 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
 import java.sql.SQLException
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 
-import com.byteslounge.slickrepo.repository._
-import com.byteslounge.slickrepo.test.scalaversion.H2Profile
+import com.spread0x.slickrepo.repository._
+import com.spread0x.slickrepo.test.scalaversion.H2Profile
 
 abstract class RepositoryTest(override val config: Config) extends AbstractRepositoryTest(config) {
 

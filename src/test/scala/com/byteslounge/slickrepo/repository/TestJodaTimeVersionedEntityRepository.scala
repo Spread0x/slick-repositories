@@ -22,15 +22,15 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
 import java.sql.Timestamp
 
-import com.byteslounge.slickrepo.meta.{Versioned, VersionedEntity}
+import com.spread0x.slickrepo.meta.{Versioned, VersionedEntity}
 import org.joda.time.Instant
 import slick.ast.BaseTypedType
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
-import com.byteslounge.slickrepo.version.JodaTimeVersionImplicits.instantVersionGenerator
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.version.JodaTimeVersionImplicits.instantVersionGenerator
 
 case class TestJodaTimeVersionedEntity(override val id: Option[Int], price: Double, override val version: Option[Instant]) extends VersionedEntity[TestJodaTimeVersionedEntity, Int, Instant] {
   def withId(id: Int): TestJodaTimeVersionedEntity = this.copy(id = Some(id))

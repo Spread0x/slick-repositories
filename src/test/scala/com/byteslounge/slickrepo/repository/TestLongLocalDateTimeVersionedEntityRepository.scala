@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
-import com.byteslounge.slickrepo.meta.{Versioned, VersionedEntity}
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
-import com.byteslounge.slickrepo.version.LongLocalDateTimeVersion
+import com.spread0x.slickrepo.meta.{Versioned, VersionedEntity}
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.version.LongLocalDateTimeVersion
 import slick.ast.BaseTypedType
 
 case class TestLongLocalDateTimeVersionedEntity(override val id: Option[Int], price: Double, override val version: Option[LongLocalDateTimeVersion]) extends VersionedEntity[TestLongLocalDateTimeVersionedEntity, Int, LongLocalDateTimeVersion] {

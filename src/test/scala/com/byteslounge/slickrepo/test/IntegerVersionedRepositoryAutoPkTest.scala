@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.exception.OptimisticLockException
-import com.byteslounge.slickrepo.repository.TestIntegerVersionedAutoPkEntity
+import com.spread0x.slickrepo.exception.OptimisticLockException
+import com.spread0x.slickrepo.repository.TestIntegerVersionedAutoPkEntity
 
 abstract class IntegerVersionedRepositoryAutoPkTest(override val config: Config) extends IntegerVersionedRepositoryTest(config) {
 
@@ -61,7 +61,7 @@ abstract class IntegerVersionedRepositoryAutoPkTest(override val config: Config)
 
         executeAction(testIntegerVersionedAutoPkEntityRepository.update(readEntity.copy(price = 4)))
       }
-    exception.getMessage should equal("Failed to update entity of type com.byteslounge.slickrepo.repository.TestIntegerVersionedAutoPkEntity. Expected version was not found: 1")
+    exception.getMessage should equal("Failed to update entity of type com.spread0x.slickrepo.repository.TestIntegerVersionedAutoPkEntity. Expected version was not found: 1")
   }
 
   it should "perform a batch insert of auto pk integer versioned entities" in {

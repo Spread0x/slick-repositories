@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.oracle
+package com.spread0x.slickrepo.test.oracle
 
-import com.byteslounge.slickrepo.test.{OracleConfig, RepositoryUpdateAutoPkTest}
+import com.spread0x.slickrepo.test.{OracleConfig, RepositoryUpdateAutoPkTest}
 
 class OracleRepositoryTest extends RepositoryUpdateAutoPkTest(OracleConfig.config)

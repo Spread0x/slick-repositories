@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.sqlserver
+package com.spread0x.slickrepo.test.sqlserver
 
-import com.byteslounge.slickrepo.test.{RepositoryTest, SQLServerConfig}
+import com.spread0x.slickrepo.test.{RepositoryTest, SQLServerConfig}
 
 class SQLServerRepositoryTest extends RepositoryTest(SQLServerConfig.config)

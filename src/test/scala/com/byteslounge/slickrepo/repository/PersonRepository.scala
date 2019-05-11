@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
-import com.byteslounge.slickrepo.meta.{Entity, Keyed}
+import com.spread0x.slickrepo.meta.{Entity, Keyed}
 import slick.ast.BaseTypedType
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
 
 case class Person(override val id: Option[Int] = None, name: String) extends Entity[Person, Int]{
   def withId(id: Int): Person = this.copy(id = Some(id))

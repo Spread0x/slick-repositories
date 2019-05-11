@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.db2
+package com.spread0x.slickrepo.test.db2
 
-import com.byteslounge.slickrepo.test.{DB2Config, JodaTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{DB2Config, JodaTimeVersionedRepositoryTest}
 
 class DB2JodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(DB2Config.config)

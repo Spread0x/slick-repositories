@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.h2
+package com.spread0x.slickrepo.test.h2
 
-import com.byteslounge.slickrepo.test.{H2Config, JodaTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{H2Config, JodaTimeVersionedRepositoryTest}
 
 class H2JodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(H2Config.config)

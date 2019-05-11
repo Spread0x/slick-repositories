@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
-import com.byteslounge.slickrepo.annotation.postLoad
-import com.byteslounge.slickrepo.test.{H2Config, LifecycleEntityRepositoryPostLoad}
+import com.spread0x.slickrepo.annotation.postLoad
+import com.spread0x.slickrepo.test.{H2Config, LifecycleEntityRepositoryPostLoad}
 import org.scalatest.{BeforeAndAfter, FlatSpec, Matchers}
 
 class LifecycleHelperTest extends FlatSpec with BeforeAndAfter with Matchers {

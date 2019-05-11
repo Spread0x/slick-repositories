@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.version
+package com.spread0x.slickrepo.version
 
-import com.byteslounge.slickrepo.datetime.DateTimeHelper
+import com.spread0x.slickrepo.datetime.DateTimeHelper
 import org.joda.time.Instant
 
 object JodaTimeVersionImplicits {

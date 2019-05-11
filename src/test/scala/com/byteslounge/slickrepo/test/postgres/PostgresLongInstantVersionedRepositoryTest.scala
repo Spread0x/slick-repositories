@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.postgres
+package com.spread0x.slickrepo.test.postgres
 
-import com.byteslounge.slickrepo.test.{LongInstantVersionedRepositoryTest, PostgresConfig}
+import com.spread0x.slickrepo.test.{LongInstantVersionedRepositoryTest, PostgresConfig}
 
 class PostgresLongInstantVersionedRepositoryTest extends LongInstantVersionedRepositoryTest(PostgresConfig.config)

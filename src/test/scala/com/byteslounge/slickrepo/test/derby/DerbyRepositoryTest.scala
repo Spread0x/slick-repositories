@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.derby
+package com.spread0x.slickrepo.test.derby
 
-import com.byteslounge.slickrepo.test.{DerbyConfig, RepositoryUpdateAutoPkTest}
+import com.spread0x.slickrepo.test.{DerbyConfig, RepositoryUpdateAutoPkTest}
 
 class DerbyRepositoryTest extends RepositoryUpdateAutoPkTest(DerbyConfig.config)

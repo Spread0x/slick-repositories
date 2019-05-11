@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
 import java.time.{Instant, LocalDateTime}
 
-import com.byteslounge.slickrepo.datetime.{DateTimeHelper, MockDateTimeHelper}
-import com.byteslounge.slickrepo.exception.OptimisticLockException
-import com.byteslounge.slickrepo.repository.TestLocalDateTimeVersionedEntity
+import com.spread0x.slickrepo.datetime.{DateTimeHelper, MockDateTimeHelper}
+import com.spread0x.slickrepo.exception.OptimisticLockException
+import com.spread0x.slickrepo.repository.TestLocalDateTimeVersionedEntity
 
 abstract class LocalDateTimeVersionedRepositoryTest(override val config: Config) extends AbstractRepositoryTest(config) {
 
@@ -73,7 +73,7 @@ abstract class LocalDateTimeVersionedRepositoryTest(override val config: Config)
 
       executeAction(testLocalDateTimeVersionedEntityRepository.update(readEntity.copy(price = 4)))
     }
-    exception.getMessage should equal("Failed to update entity of type com.byteslounge.slickrepo.repository.TestLocalDateTimeVersionedEntity. Expected version was not found: 2016-01-03T01:01:02")
+    exception.getMessage should equal("Failed to update entity of type com.spread0x.slickrepo.repository.TestLocalDateTimeVersionedEntity. Expected version was not found: 2016-01-03T01:01:02")
   }
 
   it should "perform a batch insert of LocalDateTime versioned entities" in {

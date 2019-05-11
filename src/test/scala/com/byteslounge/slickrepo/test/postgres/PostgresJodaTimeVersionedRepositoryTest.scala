@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.postgres
+package com.spread0x.slickrepo.test.postgres
 
-import com.byteslounge.slickrepo.test.{JodaTimeVersionedRepositoryTest, PostgresConfig}
+import com.spread0x.slickrepo.test.{JodaTimeVersionedRepositoryTest, PostgresConfig}
 
 class PostgresJodaTimeVersionedRepositoryTest extends JodaTimeVersionedRepositoryTest(PostgresConfig.config)

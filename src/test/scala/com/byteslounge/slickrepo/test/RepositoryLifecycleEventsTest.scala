@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test
+package com.spread0x.slickrepo.test
 
-import com.byteslounge.slickrepo.annotation._
-import com.byteslounge.slickrepo.exception.{DuplicatedHandlerException, ListenerInvocationException}
-import com.byteslounge.slickrepo.meta.{Entity, Keyed, Versioned, VersionedEntity}
-import com.byteslounge.slickrepo.repository._
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.annotation._
+import com.spread0x.slickrepo.exception.{DuplicatedHandlerException, ListenerInvocationException}
+import com.spread0x.slickrepo.meta.{Entity, Keyed, Versioned, VersionedEntity}
+import com.spread0x.slickrepo.repository._
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
 import slick.ast.BaseTypedType
 
 abstract class RepositoryLifecycleEventsTest(override val config: Config) extends AbstractRepositoryTest(config) {
@@ -254,7 +254,7 @@ abstract class RepositoryLifecycleEventsTest(override val config: Config) extend
       intercept[ListenerInvocationException] {
         executeAction(lifecycleEntityRepositoryHandlerWrongHandlerParameterType.save(LifecycleEntity(None, "john", "f1", "f2")))
       }
-    exception.getMessage should equal("Error while invoking listener for event type prePersist in class com.byteslounge.slickrepo.test.LifecycleEntityRepositoryHandlerWrongHandlerParameterType. Confirm that the handler method accepts a single parameter which type is compatible with the repository entity type")
+    exception.getMessage should equal("Error while invoking listener for event type prePersist in class com.spread0x.slickrepo.test.LifecycleEntityRepositoryHandlerWrongHandlerParameterType. Confirm that the handler method accepts a single parameter which type is compatible with the repository entity type")
     exception.getCause.getClass should equal (classOf[IllegalArgumentException])
   }
 
@@ -264,7 +264,7 @@ abstract class RepositoryLifecycleEventsTest(override val config: Config) extend
       intercept[ListenerInvocationException] {
         executeAction(lifecycleEntityRepositoryHandlerWrongHandlerParameterNumber.save(LifecycleEntity(None, "john", "f1", "f2")))
       }
-    exception.getMessage should equal("Error while invoking listener for event type prePersist in class com.byteslounge.slickrepo.test.LifecycleEntityRepositoryHandlerWrongHandlerParameterNumber. Confirm that the handler method accepts a single parameter which type is compatible with the repository entity type")
+    exception.getMessage should equal("Error while invoking listener for event type prePersist in class com.spread0x.slickrepo.test.LifecycleEntityRepositoryHandlerWrongHandlerParameterNumber. Confirm that the handler method accepts a single parameter which type is compatible with the repository entity type")
     if (scala.util.Properties.versionString.startsWith("version 2.10")) {
       exception.getCause.getClass should equal (classOf[IllegalArgumentException])
     } else {

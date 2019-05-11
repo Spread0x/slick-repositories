@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.postgres
+package com.spread0x.slickrepo.test.postgres
 
-import com.byteslounge.slickrepo.test.{LocalDateTimeVersionedRepositoryTest, PostgresConfig}
+import com.spread0x.slickrepo.test.{LocalDateTimeVersionedRepositoryTest, PostgresConfig}
 
 class PostgresLocalDateTimeVersionedRepositoryTest extends LocalDateTimeVersionedRepositoryTest(PostgresConfig.config)

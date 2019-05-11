@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.h2
+package com.spread0x.slickrepo.test.h2
 
-import com.byteslounge.slickrepo.test.{H2Config, InstantVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{H2Config, InstantVersionedRepositoryTest}
 
 class H2InstantVersionedRepositoryTest extends InstantVersionedRepositoryTest(H2Config.config)

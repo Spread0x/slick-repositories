@@ -32,7 +32,7 @@
 
         name := "slick-repository",
         description := "CRUD Repositories for Slick based persistence Scala projects",
-        version := "1.0.0",
+        version := "1.0.2",
 
         scalaVersion := "2.12.8",
         crossScalaVersions := Seq("2.12.6", "2.11.12", "2.10.7"),
@@ -86,7 +86,6 @@
             <url>https://github.com/spread0x/slick-repositories.git</url>
             <connection>scm:git:git://github.com/spread0x/slick-repositories.git</connection>
           </scm>
-
       )
 
 lazy val mysql: Project =

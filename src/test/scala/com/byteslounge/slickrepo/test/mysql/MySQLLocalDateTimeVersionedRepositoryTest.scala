@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.mysql
+package com.spread0x.slickrepo.test.mysql
 
-import com.byteslounge.slickrepo.test.{LocalDateTimeVersionedRepositoryTest, MySQLConfig}
+import com.spread0x.slickrepo.test.{LocalDateTimeVersionedRepositoryTest, MySQLConfig}
 
 class MySQLLocalDateTimeVersionedRepositoryTest extends LocalDateTimeVersionedRepositoryTest(MySQLConfig.config)

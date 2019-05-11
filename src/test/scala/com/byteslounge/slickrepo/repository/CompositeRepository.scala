@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.repository
+package com.spread0x.slickrepo.repository
 
-import com.byteslounge.slickrepo.meta.{Entity, Keyed}
-import com.byteslounge.slickrepo.scalaversion.JdbcProfile
+import com.spread0x.slickrepo.meta.{Entity, Keyed}
+import com.spread0x.slickrepo.scalaversion.JdbcProfile
 import slick.ast.BaseTypedType
 import slick.lifted.ProvenShape
 

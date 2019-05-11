@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.oracle
+package com.spread0x.slickrepo.test.oracle
 
-import com.byteslounge.slickrepo.test.{LongLocalDateTimeVersionedRepositoryTest, OracleConfig}
+import com.spread0x.slickrepo.test.{LongLocalDateTimeVersionedRepositoryTest, OracleConfig}
 
 class OracleLongLocalDateTimeVersionedRepositoryTest extends LongLocalDateTimeVersionedRepositoryTest(OracleConfig.config)

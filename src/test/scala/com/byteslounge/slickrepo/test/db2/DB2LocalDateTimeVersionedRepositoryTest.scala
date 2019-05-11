@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-package com.byteslounge.slickrepo.test.db2
+package com.spread0x.slickrepo.test.db2
 
-import com.byteslounge.slickrepo.test.{DB2Config, LocalDateTimeVersionedRepositoryTest}
+import com.spread0x.slickrepo.test.{DB2Config, LocalDateTimeVersionedRepositoryTest}
 
 class DB2LocalDateTimeVersionedRepositoryTest extends LocalDateTimeVersionedRepositoryTest(DB2Config.config)
