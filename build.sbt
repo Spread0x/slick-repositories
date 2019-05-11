@@ -32,7 +32,7 @@
 
         name := "slick-repository",
         description := "CRUD Repositories for Slick based persistence Scala projects",
-        version := "1.0.0-SNAPSHOT",
+        version := "1.0.0",
 
         scalaVersion := "2.12.8",
         crossScalaVersions := Seq("2.12.6", "2.11.12", "2.10.7"),
@@ -46,9 +46,16 @@
         testOptions in SqlServerTest := Seq(Tests.Filter(sqlServerFilter)),
 
         publishMavenStyle := true,
-        organization:= "com.byteslounge",
+        bintrayOrganization := Some("spread"),
+        bintrayRepository := "slick-repositories",
+
+
+        organization:= "com.spread0x",
         pomIncludeRepository := { _ => false },
         publishArtifact in Test := false,
+        //publishTo := sonatypePublishTo.value
+        licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
+/*
         publishTo := {
           val nexus = "https://oss.sonatype.org/"
           if (isSnapshot.value)
@@ -56,10 +63,11 @@
           else
             Some("releases"  at nexus + "service/local/staging/deploy/maven2")
         },
+*/        
         credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
         useGpg := true,
         pomExtra :=
-          <url>https://github.com/spread0x/slick-repo</url>
+          <url>https://github.com/spread0x/slick-repositories</url>
           <inceptionYear>2019</inceptionYear>
           <licenses>
             <license>
@@ -75,8 +83,8 @@
             </developer>
           </developers>
           <scm>
-            <url>https://github.com/spread0x/slick-repo.git</url>
-            <connection>scm:git:git://github.com/spread0x/slick-repo.git</connection>
+            <url>https://github.com/spread0x/slick-repositories.git</url>
+            <connection>scm:git:git://github.com/spread0x/slick-repositories.git</connection>
           </scm>
 
       )
